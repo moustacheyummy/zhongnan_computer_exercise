@@ -1,0 +1,32 @@
+#include<iostream>
+
+//自己输入数组长度与数组值
+//若数组为空，则返回error
+//删除并返回最小值，将最后一个值代替最小值，然后输出整个数组
+using namespace std;
+void Min(){
+	int n;
+	cin>>n;
+		
+	if(n==0) cout<<"error"<<endl;
+	else{
+		int A[n],i=0;
+		for(;i<n;i++){
+			cin>>A[i];
+		}
+		
+		int min=A[0],j=0;
+		for(int i=1;i<n;i++){
+			if(A[i]<min){
+				min=A[i];j=i;
+			}
+		}
+		cout<<A[j]<<endl;
+		A[j]=A[n-1];
+		for(int i =0;i<n-1;i++)cout<<A[i]<<" ";
+	}
+}
+
+int main(){
+	Min();
+}
