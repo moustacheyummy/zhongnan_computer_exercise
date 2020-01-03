@@ -1,0 +1,21 @@
+#include<iostream>
+
+//输入包含多组测试用例，该行包含一个正整数k（1＜=k<=1000）。
+//对于每组测试用例，输出只有一行，即1到k的立方和。
+
+using namespace std;
+
+void Delete(){
+	int k;
+	while(cin>>k&&k!=0){
+		if(k>=1&&k<=1000){
+			long long sum=0;
+			for(int i=1;i<=k;i++) sum+=i*i*i;
+			cout<<sum<<endl;	
+		}	
+		k=0;
+	}
+}
+int main(){
+	Delete();
+}
